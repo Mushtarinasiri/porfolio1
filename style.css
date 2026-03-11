@@ -1,0 +1,318 @@
+/* ===================== */
+/*        Root Colors    */
+/* ===================== */
+:root {
+  --bg-color: #082c6c;
+  --text-color: #ffffff;
+  --section-bg: #ffffff;
+
+  /* Navbar */
+  --navbar-bg: linear-gradient(90deg,#0a449b,#62a8e5);
+  --navbar-text: #ffffff;
+
+  /* Cards */
+  --card-bg: #1859d2;
+  --card-hover: #30aee3;
+
+  /* Buttons */
+  --btn-bg: #0d3b8e;
+  --btn-hover: #170790;
+
+  /* Accent */
+  --accent: #ffd700;
+
+  /* Contact */
+  --contact-bg: #593bcd;
+
+  /* About */
+  --about-bg: linear-gradient(135deg,#4684e9,#4229e3);
+
+  /* Hover shadow */
+  --hover-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* ===================== */
+/*        Body & HTML    */
+/* ===================== */
+body {
+  font-family: 'Trirong', serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================== */
+/*        Navbar         */
+/* ===================== */
+.navbar {
+  background: var(--navbar-bg);
+  padding: 12px 0;
+  border-bottom: 2px solid var(--accent);
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  color: var(--navbar-text) !important;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* ===================== */
+/*        Buttons        */
+/* ===================== */
+.btn-custom {
+  background: var(--btn-bg);
+  border: 1px solid var(--accent);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+  box-shadow: var(--hover-shadow);
+}
+
+/* ===================== */
+/*        Hero Section   */
+/* ===================== */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.home-text h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.profile-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle,#e0dd10,transparent 70%);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { transform: scale(1); opacity: 0.6; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* ===================== */
+/*        About Section  */
+/* ===================== */
+#about {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-box {
+  background: var(--about-bg);
+  color: var(--text-color);
+  padding: 60px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+#about h2 {
+  color: white;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#about h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+#about p {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ===================== */
+/*        Skills Section */
+/* ===================== */
+#skills {
+  padding: 50px 0;
+}
+
+#skills h1 {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+#skills .row p {
+  margin-bottom: 5px; 
+}
+
+#skills .bg-warning {
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* ===================== */
+/*        Projects       */
+/* ===================== */
+#pro {
+  padding: 50px 0;
+}
+
+#pro h2 {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.card {
+  background: var(--card-bg);
+  color: white;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  background: var(--card-hover);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: var(--hover-shadow);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.links a:first-child {
+  background: var(--btn-bg);
+  color: white;
+}
+
+.links a:last-child {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.links a:hover {
+  box-shadow: var(--hover-shadow);
+  transform: scale(1.1);
+}
+
+/* ===================== */
+/*        Contact        */
+/* ===================== */
+#contact {
+  background: var(--contact-bg);
+  color: white;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+#contact form input,
+#contact form textarea {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contact .btn-outline-light {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+#contact .btn-outline-light:hover {
+  background: var(--btn-hover);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Placeholder color */
+#contact form ::placeholder {
+  color: #ffffff;
+}
